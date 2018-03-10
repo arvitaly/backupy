@@ -17,7 +17,7 @@ class Backupy {
     constructor(config) {
         this.config = config;
         this.fileNameTemplate = "%y%_%M%_%d%_%h%_%m%_%s%_%ms%";
-        this.tmpDir = __dirname + "/tmp";
+        this.tmpDir = process.cwd() + "/tmp";
         this.isStopped = false;
         if (this.config.fileNameTemplate) {
             this.fileNameTemplate = this.config.fileNameTemplate;

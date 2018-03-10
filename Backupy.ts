@@ -43,7 +43,7 @@ export interface IUploadAdapter {
 }
 export default class Backupy {
     protected fileNameTemplate = "%y%_%M%_%d%_%h%_%m%_%s%_%ms%";
-    protected tmpDir = __dirname + "/tmp";
+    protected tmpDir = process.cwd() + "/tmp";
     protected isStopped = false;
     constructor(protected config: IBackupyConfig) {
         if (this.config.fileNameTemplate) {
